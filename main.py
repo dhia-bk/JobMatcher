@@ -7,7 +7,7 @@ from src.data_manager.DataProcessor import DataProcessor
 from src.Job_Matcher import JobMatcher
 from src.job_scraper.Scrape import Scrape
 
-
+    
 MONGO_URI = "....."
 
 POSTGRES_CONN_STRING = "......."

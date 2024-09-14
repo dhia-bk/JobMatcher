@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 
 @dataclass
 class LinkedIn_Config():
-
+    
     # login credentials 
     mail : str = "......."
     password : str = '.......'

@@ -40,3 +40,10 @@ AI-Job-Hunter/
         ├── config.py                  # Configuration settings
         ├── linkedin_scraper.py        # LinkedIn scraping logic
         └── utils.py                   # Helper functions for the scraping process
+
+
+Installation
+Prerequisites
+Python 3.11+
+PostgreSQL
+MongoDB (optional for intermediate storage)

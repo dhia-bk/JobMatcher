@@ -33,7 +33,6 @@ AI-Job-Hunter/
     │   ├── DataProcessor.py           # Data cleaning and preprocessing
     │   ├── MongoManager.py            # MongoDB interaction for intermediate storage
     │   ├── PostgresManager.py         # PostgreSQL interaction for storing structured job data
-    │   └── utils.py                   # Utility functions for data processing
     └── job_scraper/                   # Job scraper scripts
         ├── GlassDoor_Scraper.py       # Glassdoor scraping logic
         ├── Indeed_Scraper.py          # Indeed scraping logic

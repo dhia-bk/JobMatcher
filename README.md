@@ -22,7 +22,7 @@ AI-Job-Hunter is an automated job-hunting application that scrapes job listings 
 
 ```bash
 AI-Job-Hunter/
-├── Final - Resume.pdf                 # PDF file (optional, used for demo)
+├── Final - Resume.pdf                 # your resume
 ├── data/                              # Folder for storing scraped JSON data
 │   └── 2024-09-09.json                # Example of scraped job data
 ├── main.py                            # Main script to run the job scraping and recommendation system

@@ -4,8 +4,8 @@ from dataclasses import dataclass, field
 class LinkedIn_Config():
 
     # login credentials 
-    mail : str = "nebilabessrour93@gmail.com"
-    password : str = 'HGFJGfftFHGHG4949fytfyf'
+    mail : str = "......."
+    password : str = '.......'
 
     # URLs
     main_url : str = 'https://www.linkedin.com'

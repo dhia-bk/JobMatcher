@@ -41,7 +41,7 @@ AI-Job-Hunter/
         ├── config.py                  # Configuration settings
         ├── linkedin_scraper.py        # LinkedIn scraping logic
         └── utils.py                   # Helper functions for the scraping process
-
+   ```
 ## Installation
 
 ### Prerequisites
@@ -54,7 +54,7 @@ AI-Job-Hunter/
    ```bash
    git clone https://github.com/dhia-bk/AI-Job-Hunter.git
    cd AI-Job-Hunter
-   ```
+    ```
 
 2. Install the required dependencies:
    ```bash

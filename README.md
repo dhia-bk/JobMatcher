@@ -1,5 +1,4 @@
 
-```markdown
 # AI-Job-Hunter
 
 AI-Job-Hunter is an automated job-hunting application that scrapes job listings from multiple platforms (LinkedIn, Glassdoor, Indeed), processes and cleans the data, and stores it in a PostgreSQL database. The system utilizes an NLP-based recommendation engine, which combines vector embeddings, BM25 search, and reciprocal rank fusion to provide personalized job recommendations based on user profiles.
@@ -42,7 +41,6 @@ AI-Job-Hunter/
         ├── config.py                  # Configuration settings
         ├── linkedin_scraper.py        # LinkedIn scraping logic
         └── utils.py                   # Helper functions for the scraping process
-```
 
 ## Installation
 

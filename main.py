@@ -8,9 +8,9 @@ from src.Job_Matcher import JobMatcher
 from src.job_scraper.Scrape import Scrape
 
 
-MONGO_URI = "mongodb+srv://dhia_braiek:FVJTdjEFTdkVyHXo@machinelearningjobs.qqhbz.mongodb.net/?retryWrites=true&w=majority&appName=MachineLearningJobs"
+MONGO_URI = "....."
 
-POSTGRES_CONN_STRING = "postgresql://Ml_Jobs_owner:T96qkisZEFIJ@ep-purple-fire-a2n3tg6x.eu-central-1.aws.neon.tech/Ml_Jobs?sslmode=require"
+POSTGRES_CONN_STRING = "......."
 
 SCRAPED_DATA_PATH = "./data/"
 

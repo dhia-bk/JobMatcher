@@ -93,4 +93,3 @@ class MongoManager:
             print(f"Failed to close the connection: {e}")
             return False
         
-URI = "mongodb+srv://dhia_braiek:FVJTdjEFTdkVyHXo@machinelearningjobs.qqhbz.mongodb.net/?retryWrites=true&w=majority&appName=MachineLearningJobs"

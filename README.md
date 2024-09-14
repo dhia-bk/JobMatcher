@@ -41,7 +41,7 @@ AI-Job-Hunter/
         ├── linkedin_scraper.py        # LinkedIn scraping logic
         └── utils.py                   # Helper functions for the scraping process
 
-
+```
 Installation
 Prerequisites
 Python 3.11+

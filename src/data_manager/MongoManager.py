@@ -92,4 +92,3 @@ class MongoManager:
         except PyMongoError as e:
             print(f"Failed to close the connection: {e}")
             return False
-        

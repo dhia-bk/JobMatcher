@@ -97,4 +97,3 @@ AI-Job-Hunter/
 - **NLP-Based Recommendation**: Uses vector embeddings, BM25 search, and reciprocal rank fusion to deliver personalized job recommendations.
 - **Power BI**: For dashboard visualization of job data.
 ```
-

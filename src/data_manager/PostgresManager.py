@@ -56,7 +56,11 @@ class PostgresManager:
     async def fetch_data_as_dataframe(self, query, params=None):
         try:
             rows = await self.fetch_data(query, params)
-            df = pd.DataFrame(rows, columns=[desc.name for desc in self.conn.get_fields(query)])
+            if rows:
+                columns = rows[0].keys()
+                df = pd.DataFrame(rows, columns=columns)
+            else:
+                df = pd.DataFrame()
             return df
         except Exception as e:
             print(f"Error loading data into DataFrame: {e}")
@@ -69,7 +73,12 @@ class PostgresManager:
                 values = ', '.join([f"${i+1}" for i in range(len(data.columns))])
                 insert_query = f"INSERT INTO {table} ({columns}) VALUES ({values})"
                 for row in data.itertuples(index=False, name=None):
-                    await self.conn.execute(insert_query, *row)
+                    formatted_row = []
+                    for item in row:
+                        if isinstance(item, list):
+                            item = '{' + ','.join(map(str, item)) + '}'
+                        formatted_row.append(item)
+                    await self.conn.execute(insert_query, *formatted_row)
             print(f"Inserted {len(data)} rows into {table}.")
         except Exception as e:
             print(f"Error inserting data: {e}")

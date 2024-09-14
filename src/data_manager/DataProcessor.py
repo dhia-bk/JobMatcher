@@ -5,7 +5,7 @@ from typing import List, Dict
 from bson import ObjectId
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
-
+from tenacity import retry, stop_after_attempt, wait_fixed
 
 class DataProcessor:
 
@@ -17,7 +17,7 @@ class DataProcessor:
             job_id = str(job.get("_id")) if isinstance(job.get("_id"), ObjectId) else job.get("_id")
             job_title = job.get(fields_mapping['Job Title'], '').strip()
             company_name = job.get(fields_mapping['Company Name'], '').strip()
-            location = job.get(fields_mapping['Location'], '').strip()
+            location = job.get(fields_mapping['Location'], '').split('·')[0].strip()
             key = (job_title, company_name)
             if key in self.processed_jobs_cache:
                 self.processed_jobs_cache[key]['Location'] += f" / {location}"
@@ -84,14 +84,14 @@ class DataProcessor:
         return await self.clean_data(glassdoor_mongo, fields_mapping, split_info=True)
 
     @staticmethod
+    @retry(stop=stop_after_attempt(2), wait=wait_fixed(0))
     def validate_data(df: pd.DataFrame) -> pd.DataFrame:
         validation_errors = []
         
         for column in ['ID', 'Source', 'Job Title', 'Company Name', 'Location', 'Posting Date', 'Description', 'URL']:
             if column not in df.columns:
                 validation_errors.append(f"Missing required column: {column}")
-                continue
-            if df[column].isnull().any():
+            elif df[column].isnull().any():
                 validation_errors.append(f"Missing values in column: {column}")
 
         if 'Posting Date' in df.columns:
@@ -113,9 +113,10 @@ class DataProcessor:
             print("Validation Errors:")
             for error in validation_errors:
                 print(f"- {error}")
+            raise ValueError("Data validation failed")  # Raising a ValueError with a message
         else:
             print("Data validation passed.")
-
+        
         return df
 
     @staticmethod

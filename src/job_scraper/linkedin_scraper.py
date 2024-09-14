@@ -13,8 +13,8 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
-from config import LinkedIn_Config
-from utils import save_DATA_to_JSON, wait_for_page_load
+from src.job_scraper.config import LinkedIn_Config
+from src.job_scraper.utils import save_DATA_to_JSON, wait_for_page_load
 
 
 Linfig = LinkedIn_Config()

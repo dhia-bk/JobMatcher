@@ -9,8 +9,8 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from contextlib import closing
 
-from config import Indeed_Config
-from utils import save_DATA_to_JSON
+from src.job_scraper.config import Indeed_Config
+from src.job_scraper.utils import save_DATA_to_JSON
 
 
 Infig = Indeed_Config()

@@ -33,7 +33,7 @@ class MongoManager:
         self.collection = self.db[self.collection_name]
         return self
 
-    def __exit__(self, exc_type, exc_val, exc_tb):
+    def __exit__(self):
         if self.client:
             self.client.close()
 
@@ -59,9 +59,13 @@ class MongoManager:
                 return False
 
             collection = self.db[collection_name] if collection_name else self.collection
-            collection.insert_many(data)
-            os.remove(file_path)
-            return True
+            try:
+                if collection.insert_many(data):
+                    # os.remove(file_path)
+                    return True
+                return False
+            except Exception as e:
+                print(e)
         except (PyMongoError, json.JSONDecodeError, OSError) as e:
             print(f"Failed to save data to MongoDB: {e}")
             return False

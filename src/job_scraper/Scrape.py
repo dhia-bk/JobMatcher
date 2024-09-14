@@ -1,8 +1,8 @@
 import concurrent.futures
-from linkedin_scraper import LinkedInScraper
-from GlassDoor_Scraper import GlassDoor_Scraper
-from Indeed_Scraper import IndeedInScraper
-from utils import time_it
+from src.job_scraper.linkedin_scraper import LinkedInScraper
+from src.job_scraper.GlassDoor_Scraper import GlassDoor_Scraper
+from src.job_scraper.Indeed_Scraper import IndeedInScraper
+from src.job_scraper.utils import time_it
 
 def run_scraper(scraper_class):
     scraper = scraper_class()
@@ -19,5 +19,3 @@ def Scrape():
             except Exception:
                 pass    
     print('Done scraping')
-
-Scrape()

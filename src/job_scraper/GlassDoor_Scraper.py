@@ -10,8 +10,8 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 import undetected_chromedriver as uc
 
-from config import GlassDoor_Config
-from utils import save_DATA_to_JSON
+from src.job_scraper.config import GlassDoor_Config
+from src.job_scraper.utils import save_DATA_to_JSON
 
 
 glassfig = GlassDoor_Config()

@@ -54,7 +54,7 @@ AI-Job-Hunter/
 ### Steps
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/AI-Job-Hunter.git
+   git clone https://github.com/dhia-bk/AI-Job-Hunter.git
    cd AI-Job-Hunter
    ```
 
@@ -63,8 +63,10 @@ AI-Job-Hunter/
    pip install -r requirements.txt
    ```
 
+
+3. Set up LinkedIn account in src/job_scraper/config.py
 3. Set up PostgreSQL:
-   - Create a database and tables for storing scraped jobs, recommended jobs, and applied jobs.
+   - run Setup.py to set up and configure the PostgreSQL database.
 
 4. (Optional) Configure MongoDB if you plan to use it for storing raw job data before cleaning.
 
@@ -95,7 +97,6 @@ AI-Job-Hunter/
 - **PostgreSQL**: For storing cleaned job data in a structured format.
 - **MongoDB**: (Optional) Intermediate storage of raw scraped data.
 - **NLP-Based Recommendation**: Uses vector embeddings, BM25 search, and reciprocal rank fusion to deliver personalized job recommendations.
-- **Kafka** (Optional): For real-time data streaming.
 - **Power BI**: For dashboard visualization of job data.
 ```
 

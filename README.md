@@ -1,7 +1,7 @@
 
-# AI-Job-Hunter
+# JobMatcher
 
-AI-Job-Hunter is an automated job-hunting application that scrapes job listings from multiple platforms (LinkedIn, Glassdoor, Indeed), processes and cleans the data, and stores it in a PostgreSQL database. The system utilizes an NLP-based recommendation engine, which combines vector embeddings, BM25 search, and reciprocal rank fusion to provide personalized job recommendations based on user profiles.
+JobMatcher is an automated job-hunting application that scrapes job listings from multiple platforms (LinkedIn, Glassdoor, Indeed), processes and cleans the data, and stores it in a PostgreSQL database. The system utilizes an NLP-based recommendation engine, which combines vector embeddings, BM25 search, and reciprocal rank fusion to provide personalized job recommendations based on user profiles.
 
 ## Table of Contents
 - [Features](#features)
